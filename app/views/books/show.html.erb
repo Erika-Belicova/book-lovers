@@ -1,0 +1,12 @@
+<h1><%= @book.title %></h1>
+<h2>Here is all you need to know about this book!<h2>
+
+<%= @book.author %>
+<%= @book.year %>
+<%= @book.genre %>
+<%= @book.summary %>
+
+<%= link_to "Return to homepage", root_path %>
+
+<%= button_to "Add bookmark", user_bookmarks_path(@user.id), method: :post,
+ class: "btn-primary-home", params: { user_id: @user.id, book_id: @book.id} %>
