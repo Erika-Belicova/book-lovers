@@ -1,0 +1,9 @@
+<h1>My bookmarks</h1>
+
+<% @bookmarks.each do |bookmark|%>
+  <%= bookmark.book.title %>
+  <%= button_to "Delete bookmark", user_bookmark_path(@user.id, bookmark), method: :delete,
+ class: "btn-primary-home" %>
+<% end %>
+
+<%= link_to "Return to homepage", root_path %>
