@@ -2,8 +2,13 @@
 <p>Browse our book suggestions and bookmark the books you like!</p>
 
 <% @books.each do |book| %>
-  <%= book.title %>
-  <%= link_to "Book details", book_path(book) %>
+
+  <div class="card-product">
+    <div class="card-product-infos">
+      <h3><%= book.title %></h3>
+       <%= link_to "Book details", book_path(book) %>
+  </div>
+</div>
 <% end %>
 
 <%= link_to "My bookmarks", user_bookmarks_path(@user) %>
