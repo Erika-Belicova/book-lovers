@@ -1,12 +1,56 @@
-<h1><%= @book.title %></h1>
-<h2>Here is all you need to know about this book!<h2>
+<div class="container">
 
-<%= @book.author %>
-<%= @book.year %>
-<%= @book.genre %>
-<%= @book.summary %>
+  <h1><%= @book.title %></h1>
+  <h2>Here is all you need to know about this book!<h2>
 
-<%= link_to "Return to homepage", root_path %>
+    <div class="card-product-details">
+        <div class="card-content">
+          <div class="element-1-show">
+            <h3>Author: </h3>
+          </div>
+          <div class="element-2-show">
+            <p><%= @book.author %></p>
+          </div>
+        </div>
+    </div>
 
-<%= button_to "Add bookmark", user_bookmarks_path(@user.id), method: :post,
- class: "btn-primary-home", params: { user_id: @user.id, book_id: @book.id} %>
+      <div class="card-product-details">
+        <div class="card-content">
+          <div class="element-1-show">
+            <h3>Year: </h3>
+          </div>
+          <div class="element-2-show">
+            <p><%= @book.year %></p>
+          </div>
+        </div>
+    </div>
+
+      <div class="card-product-details">
+        <div class="card-content">
+          <div class="element-1-show">
+            <h3>Genre: </h3>
+          </div>
+          <div class="element-2-show">
+            <p><%= @book.genre %></p>
+          </div>
+        </div>
+    </div>
+
+    <div class="card-info">
+      <div class="element-1-show">
+        <h3>Summary: </h3>
+        <p><%= @book.summary %></p>
+      </div>
+    </div>
+
+    <div class="card-buttons">
+      <div class="element-1">
+        <%= link_to "Return to homepage", root_path, class: "btn btn-flat" %>
+      </div>
+      <div class="element-2">
+        <%= button_to "Add bookmark", user_bookmarks_path(@user.id), method: :post,
+          class: "btn btn-flat", params: { user_id: @user.id, book_id: @book.id} %>
+      </div>
+    </div>
+
+</div>

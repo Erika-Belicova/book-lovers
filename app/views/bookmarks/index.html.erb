@@ -1,18 +1,25 @@
 <div class="container">
-<h1>My bookmarks</h1>
 
-<h2>Here are your bookmarks. You can delete a bookmark once you have read the book.</h2>
+  <h1>My bookmarks</h1>
+  <h2>Here are your bookmarks. You can delete a bookmark once you have read the book.</h2>
 
-<% @bookmarks.each do |bookmark|%>
+  <% @bookmarks.each do |bookmark|%>
 
- <div class="card-product">
-  <div class="card-product-infos">
-    <h3><%= bookmark.book.title %></h3>
-      <%= button_to "Delete bookmark", user_bookmark_path(@user.id, bookmark), method: :delete, class: "btn-primary" %>
+    <div class="card-product">
+        <div class="card-content">
+          <div class="element-1">
+            <h3><%= bookmark.book.title %></h3>
+          </div>
+          <div class="element-2">
+            <%= button_to "Delete bookmark", user_bookmark_path(@user.id, bookmark), method: :delete, class: "btn btn-flat" %>
+          </div>
+        </div>
+    </div>
+
+  <% end %>
+
+  <div class="button-left">
+    <%= link_to "Close bookmarks", root_path, class: "btn btn-flat" %>
   </div>
-</div>
 
-<% end %>
-
-<%= link_to "Return to homepage", root_path, class: "btn-primary" %>
 </div>

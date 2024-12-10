@@ -10,10 +10,10 @@
 
 Book.destroy_all
 
-Book.create!(title: "The Tower", author: "Dan Brown", year: "1992", summary: "A novel about the dangers lurking in an abandoned tower.")
-Book.create!(title: "People Everywhere", author: "Alan Dennis", year: "1998", summary: "How to get along with anybody in your daily life.")
-Book.create!(title: "Another Day", author: "Sim Peters", year: "2002", summary: "How to move on from grief that alters your life.")
-Book.create!(title: "Just a Dream", author: "Olivia Dance", year: "2014", summary: "A fantasy novel about lovers from different realms of existence.")
-Book.create!(title: "Sometimes", author: "Nancy Apple", year: "2021", summary: "Sometimes you meet the right person at the wrong time and chaos ensures.")
+Book.create!(title: "The Tower", author: "Dan Brown", year: "1992", genre: "mystery", summary: "A novel about the dangers lurking in an abandoned tower.")
+Book.create!(title: "People Everywhere", author: "Alan Dennis", year: "1998", genre: "motivation", summary: "How to get along with anybody in your daily life.")
+Book.create!(title: "Another Day", author: "Sim Peters", year: "2002", genre: "psychology", summary: "How to move on from grief that alters your life.")
+Book.create!(title: "Just a Dream", author: "Olivia Dance", year: "2014", genre: "fantasy", summary: "A fantasy novel about lovers from different realms of existence.")
+Book.create!(title: "Sometimes", author: "Nancy Apple", year: "2021", genre: "romance", summary: "Sometimes you meet the right person at the wrong time and chaos ensures.")
 
 puts "Finished! Created #{Book.count} books."
