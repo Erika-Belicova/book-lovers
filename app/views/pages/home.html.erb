@@ -1,14 +1,23 @@
-<h1>BookLovers</h1>
-<p>Browse our book suggestions and bookmark the books you like!</p>
+<div class="container">
+  <h1>BookLovers</h1>
+  <h3>Browse our book suggestions and bookmark the books you like!</h3>
 
-<% @books.each do |book| %>
+  <% @books.each do |book| %>
 
-  <div class="card-product">
-    <div class="card-product-infos">
-      <h3><%= book.title %></h3>
-       <%= link_to "Book details", book_path(book) %>
+    <div class="card-product">
+        <div class="card-content">
+          <div class="element-1">
+            <h3><%= book.title %></h3>
+          </div>
+          <div class="element-2">
+            <%= link_to "Book details", book_path(book), class: "btn btn-flat" %>
+          </div>
+        </div>
+    </div>
+  <% end %>
+
+  <div class="button-left">
+    <%= link_to "My bookmarks", user_bookmarks_path(@user), class: "btn btn-flat" %>
   </div>
-</div>
-<% end %>
 
-<%= link_to "My bookmarks", user_bookmarks_path(@user) %>
+</div>
