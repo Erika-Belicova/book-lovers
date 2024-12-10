@@ -5,6 +5,7 @@
   <% @books.each do |book| %>
 
     <div class="card-product">
+      <%= image_tag("book_#{book.id}.jpg", size:"120x120", alt: book.title) %>
         <div class="card-content">
           <div class="element-1">
             <h3><%= book.title %></h3>

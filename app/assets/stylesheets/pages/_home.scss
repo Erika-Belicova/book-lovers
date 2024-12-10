@@ -113,3 +113,19 @@ p {
   justify-content: flex-end;
   align-items: center;
 }
+
+.show-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.element-details {
+  align-items: right;
+  width: 70%;
+}
+
+.element-image {
+  align-items: left;
+  padding-top: 10px;
+}

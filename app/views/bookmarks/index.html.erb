@@ -1,11 +1,12 @@
 <div class="container">
 
   <h1>My bookmarks</h1>
-  <h2>Here are your bookmarks. You can delete a bookmark once you have read the book.</h2>
+  <h3>Here are your bookmarks. You can delete a bookmark once you have read the book.</h3>
 
   <% @bookmarks.each do |bookmark|%>
 
     <div class="card-product">
+      <%= image_tag("book_#{bookmark.book.id}.jpg", size:"120x120", alt: bookmark.book.title) %>
         <div class="card-content">
           <div class="element-1">
             <h3><%= bookmark.book.title %></h3>
